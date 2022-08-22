@@ -39,7 +39,7 @@
                     <h2 class="font-semibold text-2xl text-white mt-1 player-name">Alisson Becker</h2>
                     <div class="text-center mt-10">
                         <button id="alisson" class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this), disableData(); this.disabled = true;">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -48,7 +48,7 @@
                         Alexander-Arnold</h2>
                     <div class="text-center mt-10">
                         <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -56,7 +56,7 @@
                     <h2 class="font-semibold text-2xl text-white mt-1 player-name">Roberto Firmino</h2>
                     <div class="text-center mt-10">
                         <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -64,7 +64,7 @@
                     <h2 class="font-semibold text-2xl text-white mt-1 player-name">Luis Díaz</h2>
                     <div class="text-center mt-10">
                         <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -72,7 +72,7 @@
                     <h2 class="font-semibold text-2xl text-white mt-1 player-name">Mohamed Salah</h2>
                     <div class="text-center mt-10">
                         <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -80,7 +80,7 @@
                     <h2 class="font-semibold text-2xl text-white mt-1 player-name">Darwin Núñez</h2>
                     <div class="text-center mt-10">
                         <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -89,7 +89,7 @@
                     </h2>
                     <div class="text-center mt-10">
                         <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -97,7 +97,7 @@
                     <h2 class="font-semibold text-2xl text-white mt-1 player-name">Thiago Alcântara</h2>
                     <div class="text-center mt-10">
                         <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -105,7 +105,7 @@
                     <h2 class="font-semibold text-2xl text-white mt-1 player-name">Virgil van Dijk</h2>
                     <div class="text-center mt-10">
                         <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                            onclick="addPlayerOnClick(this), disableIt(this)">SELECT</button>
                     </div>
                 </div>
             </div>
@@ -124,8 +124,8 @@
                     </p>
                     <button class="bg-red-500 px-10 py-2 mt-5 text-white font-semibold rounded-lg"
                         id="calc-player-cost">Calculate</button>
-                    <p class="mt-5 flex justify-between">Player Expenses <span>$<span
-                                id="total-player-cost">000</span></span></p>
+                    <p class="mt-5 flex justify-between">Player Expenses <span>$<span id="total-player-cost"
+                                class="font-semibold text-2xl">000</span></span></p>
                     <p class="mt-5 flex justify-between">Manager <input class="text-black" type="text" name=""
                             id="manager-cost"></p>
                     <p class="mt-2 flex justify-between">Coach <input class="text-black" type="text" name=""
@@ -133,7 +133,8 @@
                     <button class="bg-red-500 px-10 py-2 mt-5 text-white font-semibold rounded-lg"
                         id="calculate-total">Calculate
                         Total</button>
-                    <p class="mt-5 flex justify-between">Total <span>$<span id="total-cost">000</span></span></p>
+                    <p class="mt-5 flex justify-between">Total <span>$<span id="total-cost"
+                                class="font-semibold text-2xl">000</span></span></p>
                 </div>
             </div>
         </section>

@@ -1,9 +1,17 @@
 const playerNames = [];
 
+function addPlayerOnClick(playerId) {
+    const playerName = playerId.parentNode.parentNode.children[1].innerText;
+    const playerObj = { singlePlayerName: playerName };
+    playerNames.push(playerObj);
+    displayPlayerName(playerNames);
+}
+
 function displayPlayerName(displayPlayers) {
     if (displayPlayers.length > 5) {
         alert("You can't add more than 5 players");
         return;
+
     }
     const displaySinglePlayerName = document.getElementById('display-players');
     displaySinglePlayerName.innerHTML = '';
@@ -20,17 +28,13 @@ function displayPlayerName(displayPlayers) {
     }
 
 }
-function disableData() {
-    const selectButtons = document.querySelectorAll('button');
-    selectButtons.style.backgroundColor = 'green';
+
+function disableIt(elementDisable) {
+    elementDisable.disabled = true;
+    return;
 }
 
-function addPlayerOnClick(playerId) {
-    const playerName = playerId.parentNode.parentNode.children[1].innerText;
-    const playerObj = { singlePlayerName: playerName };
-    playerNames.push(playerObj);
-    displayPlayerName(playerNames);
-}
+
 
 
 
@@ -71,6 +75,3 @@ document.getElementById('calculate-total').addEventListener('click', function ()
 
     getAndSetElemnetValue('total-cost', totalCost);
 })
-
-
-
