@@ -10,3 +10,14 @@ body {
     background-size: cover;
     height: 60vh;
 }
+
+main {
+    width: 90%;
+}
+
+
+.player-img {
+    width: 337px;
+    height: 170px;
+    border-radius: 5px;
+}
