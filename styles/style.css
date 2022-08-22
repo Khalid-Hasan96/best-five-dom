@@ -21,3 +21,7 @@ main {
     height: 170px;
     border-radius: 5px;
 }
+
+.selected-player {
+    height: 270px;
+}

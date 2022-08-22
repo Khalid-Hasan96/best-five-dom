@@ -38,8 +38,8 @@
                     <img class="player-img" src="./images/alisson.png" alt="">
                     <h2 class="font-semibold text-2xl text-white mt-1 player-name">Alisson Becker</h2>
                     <div class="text-center mt-10">
-                        <button class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
-                            onclick="addPlayerOnClick(this)">SELECT</button>
+                        <button id="alisson" class="bg-red-500 px-16 py-2 text-white font-semibold rounded-lg"
+                            onclick="addPlayerOnClick(this), disableData(); this.disabled = true;">SELECT</button>
                     </div>
                 </div>
                 <div class="p-3 bg-red-300 rounded">
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div>
-                <div class="bg-red-300 text-white text-center p-5 rounded-lg">
+                <div class="bg-red-300 text-white text-center p-5 rounded-lg selected-player">
                     <h2 class="font-bold text-3xl">Selected - V</h2>
                     <ul class="mt-5" id="display-players">
 
@@ -119,14 +119,17 @@
                 </div>
                 <div class="mt-5 bg-red-300 text-white p-5 rounded-lg flex flex-col justify-items-start">
                     <h2 class="font-bold text-3xl text-center">Budget</h2>
-                    <p class="mt-5 flex justify-between">Per Player <input type="text" name="" id="per-player-total">
+                    <p class="mt-5 flex justify-between">Per Player <input type="text" class="text-black" name=""
+                            id="per-player-total">
                     </p>
                     <button class="bg-red-500 px-10 py-2 mt-5 text-white font-semibold rounded-lg"
-                        id="calculate-total-player">Calculate</button>
+                        id="calc-player-cost">Calculate</button>
                     <p class="mt-5 flex justify-between">Player Expenses <span>$<span
                                 id="total-player-cost">000</span></span></p>
-                    <p class="mt-5 flex justify-between">Manager <input type="text" name="" id="manager-cost"></p>
-                    <p class="mt-2 flex justify-between">Coach <input type="text" name="" id="coach-cost"></p>
+                    <p class="mt-5 flex justify-between">Manager <input class="text-black" type="text" name=""
+                            id="manager-cost"></p>
+                    <p class="mt-2 flex justify-between">Coach <input class="text-black" type="text" name=""
+                            id="coach-cost"></p>
                     <button class="bg-red-500 px-10 py-2 mt-5 text-white font-semibold rounded-lg"
                         id="calculate-total">Calculate
                         Total</button>
