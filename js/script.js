@@ -1,17 +1,9 @@
 const playerNames = [];
 
-function addPlayerOnClick(playerId) {
-    const playerName = playerId.parentNode.parentNode.children[1].innerText;
-    const playerObj = { singlePlayerName: playerName };
-    playerNames.push(playerObj);
-    displayPlayerName(playerNames);
-}
-
 function displayPlayerName(displayPlayers) {
     if (displayPlayers.length > 5) {
         alert("You can't add more than 5 players");
         return;
-
     }
     const displaySinglePlayerName = document.getElementById('display-players');
     displaySinglePlayerName.innerHTML = '';
@@ -29,20 +21,28 @@ function displayPlayerName(displayPlayers) {
 
 }
 
+function addPlayerOnClick(playerId) {
+    const playerName = playerId.parentNode.parentNode.children[1].innerText;
+    const playerObj = { singlePlayerName: playerName };
+    playerNames.push(playerObj);
+    displayPlayerName(playerNames);
+}
+
 function disableIt(elementDisable) {
     elementDisable.disabled = true;
     return;
 }
-
-
-
-
 
 function getInputFields(inputId) {
     const getInputField = document.getElementById(inputId);
     const getInputElementString = getInputField.value;
     const getInputElement = parseFloat(getInputElementString);
     getInputField.value = '';
+    if (getInputElementString < 0 || typeof inputId !== 'number') {
+        alert('Input positive number or type number type data.');
+        return;
+    }
+
     return getInputElement;
 }
 
@@ -51,6 +51,7 @@ function getAndSetElemnetValue(elementId, newValue) {
     const getElementsString = getElements.innerText;
     const elements = parseFloat(getElementsString);
     getElements.innerText = newValue;
+
     return elements;
 }
 
