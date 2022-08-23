@@ -16,6 +16,7 @@ function displayPlayerName(displayPlayers) {
         <li class="text-xl font-semibold">${i + 1}. ${singelPlayerName}</li>
         
         `;
+
         displaySinglePlayerName.appendChild(li);
     }
 
@@ -38,7 +39,7 @@ function getInputFields(inputId) {
     const getInputElementString = getInputField.value;
     const getInputElement = parseFloat(getInputElementString);
     getInputField.value = '';
-    if (getInputElementString < 0 || typeof inputId !== 'number') {
+    if (getInputElementString < 0) {
         alert('Input positive number or type number type data.');
         return;
     }
@@ -58,7 +59,7 @@ function getAndSetElemnetValue(elementId, newValue) {
 // calculating & displaying player cost
 document.getElementById('calc-player-cost').addEventListener('click', function () {
     const getPlayerCostInput = getInputFields('per-player-total')
-    const totalPlayerCost = getPlayerCostInput * 5;
+    const totalPlayerCost = getPlayerCostInput * playerNames.length;
     getAndSetElemnetValue('total-player-cost', totalPlayerCost);
 
 })
