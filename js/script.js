@@ -2,6 +2,7 @@ const playerNames = [];
 
 function displayPlayerName(displayPlayers) {
     if (displayPlayers.length > 5) {
+        playerNames.pop();
         alert("You can't add more than 5 players");
         return;
     }
@@ -77,3 +78,5 @@ document.getElementById('calculate-total').addEventListener('click', function ()
 
     getAndSetElemnetValue('total-cost', totalCost);
 })
+
+
