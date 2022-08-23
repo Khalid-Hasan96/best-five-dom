@@ -43,4 +43,3 @@ document.getElementById('virgil').addEventListener('click', function () {
     changeColor.style.backgroundColor = 'gray';
     changeColor.style.color = 'lightgray';
 })
-

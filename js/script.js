@@ -61,6 +61,10 @@ function getAndSetElemnetValue(elementId, newValue) {
 document.getElementById('calc-player-cost').addEventListener('click', function () {
     const getPlayerCostInput = getInputFields('per-player-total')
     const totalPlayerCost = getPlayerCostInput * playerNames.length;
+    if (playerNames.length == 0) {
+        alert('Select players to calculate total');
+        return;
+    }
     getAndSetElemnetValue('total-player-cost', totalPlayerCost);
 
 })
